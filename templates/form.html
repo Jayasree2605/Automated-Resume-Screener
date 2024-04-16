@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Skill Spotter</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+      }
+
+      header {
+        background-color: blueviolet;
+        padding: 10px 0;
+      }
+
+      .menu {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      .app-name {
+        color: white;
+        font-size: 24px;
+        font-weight: bold;
+      }
+
+      nav ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      nav ul li {
+        display: inline;
+        margin-right: 20px;
+      }
+
+      nav ul li a {
+        color: white;
+        text-decoration: none;
+        font-size: 18px;
+      }
+
+      .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+
+      .form-container {
+        text-align: center;
+        background-color: #f2f2f2;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+
+      .submit-button {
+        display: block;
+        background-color: blueviolet;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-top: 10px;
+        align-items: center;
+        margin-left: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="menu">
+        <div class="app-name">Skill Spotter</div>
+        <nav>
+          <ul>
+            <li><a href="#">Home</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <div class="container">
+      <div class="form-container">
+        <form method="post">
+          <p>What is your unique HR ID?</p>
+          <input type="number" name="response" />
+          <br />
+          <!-- Add line break to move to the next line -->
+          <input class="submit-button" type="submit" value="Submit" />
+          <!-- Add class to submit button -->
+        </form>
+        {% if message %}
+        <p>{{ message }}</p>
+        {% endif %}
+      </div>
+    </div>
+  </body>
+</html>
